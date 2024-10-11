@@ -8,7 +8,7 @@ export default function Auth() {
       <h1>
         You need to confirm ownership of the token to access that content.
       </h1>
-      <Button>Sign</Button>
+      <Button>Proof ownership</Button>
     </div>
   );
 }
