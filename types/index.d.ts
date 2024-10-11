@@ -1,15 +1,8 @@
-export type NavItem = {
-  title: string;
-  href: string;
-  disabled?: boolean;
-};
+import type { Address, ByteArray, Hex, Signature } from "viem";
 
-export type MainNavItem = NavItem;
-
-export type SiteConfig = {
-  name: string;
-  description?: string;
-  url?: string;
-  ogImage?: string;
-  mainNav?: MainNavItem[];
+export type Claim = {
+  tokenAddress: Address;
+  signature?: Hex | ByteArray | Signature | undefined;
+  ownerAddress: Address;
+  network: string;
 };
