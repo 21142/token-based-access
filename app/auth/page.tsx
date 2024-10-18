@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/Button";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { type Address } from "viem";
 import { useAccount, useSignMessage } from "wagmi";
 import { claimAccess } from "../actions/claimAccess";
 
-const TOKEN_TO_PROVE_OWNERSHIP = "0x779877A7B0D9E8603169DdbD7836e478b4624789";
+const TOKEN_TO_PROVE_OWNERSHIP = process.env
+  .NEXT_PUBLIC_TOKEN_TO_PROVE_OWNERSHIP as Address;
 
 export default function Auth() {
   const router = useRouter();
